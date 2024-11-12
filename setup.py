@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='ATACS',
-    version='0.1.0',
+    version='0.1.1',
     author='Chirag Bhatia',
     author_email='chiragbhatia2002@yahoo.com',
     description='A Python package for financial analysis including RSI, MACD, and statistical insights.',
