@@ -5,7 +5,11 @@ def calculate_statistics(stock_prices, market_prices):
     # Calculate the mean, median, mode, standard deviation, variance, covariance, and correlation
     mean = np.mean(stock_prices)
     median = np.median(stock_prices)
-    mode = stats.mode(stock_prices)[0][0]  # Corrected access to mode
+    
+    # Corrected mode calculation
+    mode_result = stats.mode(stock_prices)
+    mode = mode_result.mode[0]  # Access the mode value correctly
+    
     std_dev = np.std(stock_prices)
     variance = np.var(stock_prices)
     
