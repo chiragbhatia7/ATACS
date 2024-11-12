@@ -8,7 +8,10 @@ def calculate_statistics(stock_prices, market_prices):
     
     # Corrected mode calculation
     mode_result = stats.mode(stock_prices)
-    mode = mode_result.mode[0]  # Access the mode value correctly
+    if isinstance(mode_result.mode, np.ndarray):
+        mode = mode_result.mode[0]  # Access the mode value correctly
+    else:
+        mode = mode_result.mode  # If mode is a scalar, assign it directly
     
     std_dev = np.std(stock_prices)
     variance = np.var(stock_prices)
